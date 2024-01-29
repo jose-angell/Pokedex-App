@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LazyImageComponent } from './components/lazy-image/lazy-image.component';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    LazyImageComponent
+  ],
   imports: [
     CommonModule
   ]
