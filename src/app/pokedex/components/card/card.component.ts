@@ -18,14 +18,12 @@ public svg: string[] = ['../../../../assets/icons/hp.svg','../../../../assets/ic
 constructor(private pokemonService: PokedexService){
 }
 ngOnInit(): void {
-    //console.log(this.pokemon)
+
     if(!this.pokemonUrl) throw new Error('Url property is required');
    this.pokemonService.searchPokemon(this.pokemonUrl).subscribe(resp => {
-    console.log(resp)
     this.pokemon = resp
    })
 
-    //throw new Error('Method not implemented.');
   }
 
 

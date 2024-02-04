@@ -1,10 +1,18 @@
-<div class="col ">
+<div *ngIf="pokemon"
+ class="col card-body">
     <img width="200" height="200"
-    [src]="pokemon.sprites.other?.dream_world?.front_default" alt="">
+    [src]="pokemon.sprites.other?.dream_world?.front_default" [alt]="pokemon.name">
     <div class="col-12">
-      <p class="card-text">
+      <h2 class="text-dark text-title ">
         {{pokemon.name| titlecase}}
-      </p>
+      </h2>
+      <div class="type">
+      <div
+      *ngFor="let type of pokemon.types"
+      class="text-dark ">
+         <h5>{{type.type.name | titlecase}}</h5>
+        </div>
+        </div>
         <ul class="list-group " *ngFor="let item of pokemon.stats; let i = index">
             <li class="list-group-item data-pokemon"  >
                 <i class=" col-1" ><img [src]="svg[i]" alt="" height="20"></i>

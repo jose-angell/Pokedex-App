@@ -1,7 +1,11 @@
 <div class="row p-3">
   <h1 class="text-center">Pokedex</h1>
-  <div class="col-12 pt-2">
+  <div class="d-flex justify-content-around ">
+    <button class="btn btn-primary" (click)="PreviusPage()">Previus</button>
+    <button class="btn btn-primary" (click)="NextPage()">Next</button>
+  </div>
+  <div class="col-12 pt-2 ">
     <!-- Listado de Pokemones -->
-    <pokedex-card-list ></pokedex-card-list>
+    <pokedex-card-list [pokedex]="pokedex"></pokedex-card-list>
   </div>
 </div>

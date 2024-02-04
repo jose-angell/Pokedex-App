@@ -12,19 +12,14 @@ export class PokedexService {
   constructor(private http: HttpClient) {
     //this.searchPokedex();
    }
-  searchPokedex():void {
+  searchPokedex(pokedexUrl: string):void {
 
-    this.http.get<Pokedex>('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=20')
+    this.http.get<Pokedex>(pokedexUrl)
     .subscribe(resp =>{
       this.pokedex = resp
-      console.log(this.pokedex)
     })
   }
   searchPokemon(PokemonUrl: string):Observable<Pokemon>{
-    console.log(PokemonUrl)
     return this.http.get<Pokemon>(PokemonUrl)
-    // .subscribe(resp => {
-    //   this.pokemon = resp;
-    // })
   }
 }
