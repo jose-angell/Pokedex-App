@@ -1,2 +1,16 @@
-
-<img [src]="pokemon.sprites.other?.dream_world?.front_default" alt="">
+<div class="col ">
+    <img width="200" height="200"
+    [src]="pokemon.sprites.other?.dream_world?.front_default" alt="">
+    <div class="col-12">
+      <p class="card-text">
+        {{pokemon.name| titlecase}}
+      </p>
+        <ul class="list-group " *ngFor="let item of pokemon.stats; let i = index">
+            <li class="list-group-item data-pokemon"  >
+                <i class=" col-1" ><img [src]="svg[i]" alt="" height="20"></i>
+                <span class="col-7 text-data">{{dataPokemon[i] | titlecase}}: </span>
+                <span class="col-4">{{pokemon.stats[i].base_stat}}</span>
+            </li>
+        </ul>
+    </div>
+</div>

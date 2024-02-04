@@ -1,0 +1,9 @@
+.data-pokemon{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text-data {
+  text-align: left;
+  margin-left: 5px;
+}

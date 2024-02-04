@@ -1,6 +1,5 @@
 <div class="row" *ngIf="pokedex">
-  <div class="card mb-2 text-center bg-dark col-md-3 col-sm-6"
-
+  <div class="card mb-2 text-center bg-dark col-md-3 col-sm-6 "
     *ngFor="let pokemon of pokedex.results; let i = index"
   >
     <div class="card-body text-white " >
@@ -8,9 +7,7 @@
 
        [pokemonUrl]="pokemon.url"></pokedex-card>
 
-      <p class="card-text">
-        {{pokemon.name| titlecase}}
-      </p>
+
     </div>
   </div>
 </div>

@@ -12,6 +12,9 @@ export class CardComponent implements OnInit{
 @Input()
 public pokemonUrl!: string ;
 public pokemon!: Pokemon;
+
+public dataPokemon: string[]=["hp", "attack","defense","special-attack","special-defense","speed"]
+public svg: string[] = ['../../../../assets/icons/hp.svg','../../../../assets/icons/attack.svg','../../../../assets/icons/defense.svg','../../../../assets/icons/special-attack.svg','../../../../assets/icons/special-defense.svg','../../../../assets/icons/speed.svg']
 constructor(private pokemonService: PokedexService){
 }
 ngOnInit(): void {
@@ -24,9 +27,7 @@ ngOnInit(): void {
 
     //throw new Error('Method not implemented.');
   }
-get pokemonData():Pokemon{
-  return this.pokemonService.pokemon;
-}
+
 
 
 }
